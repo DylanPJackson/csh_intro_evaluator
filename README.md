@@ -33,3 +33,6 @@ It is simply a tertiary classification model which takes in an applicant's intro
 data, which are the numerical representations of the requirements described 
 above, and says whether or not CSH is more likely to pass, fail, or conditional 
 that applicant. 
+
+## TODO Items
+1. Regularized vs. non regularized
