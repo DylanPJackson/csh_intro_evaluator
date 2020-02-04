@@ -28,11 +28,19 @@ could predict how the organization would end up voting, so I did. The name that
 we came up with for it is, The Evaluator.
 
 ## What is The Evaluator, how does it work?
-### What it is
+### What it is, generally
 It is simply a tertiary classification model which takes in an applicant's intro 
 data, which are the numerical representations of the requirements described 
 above, and says whether or not CSH is more likely to pass, fail, or conditional 
 that applicant. 
+
+### How it was made
+1. A copy of the CSH databases was acquired in the form of a raw NoSQL dump. A
+local SQL database was created from that dump. Tons of SQL queries were made to
+get the appropriate features and results. 
+2. Thoughts on general model. Should we use a neural network, should we use 
+logistic regression, what should the activation function be, should we regularize,
+and many other questions.
 
 ## TODO Items
 1. Regularized vs. non regularized
