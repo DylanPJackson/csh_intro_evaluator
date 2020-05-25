@@ -54,7 +54,7 @@ Want to see whether or not you'd make it into CSH? Follow these steps
 (If you have any questions about this, message me on Slack or email me!)
 1. Go ahead and download ai\_vote.py. 
 2. Make sure you have numpy and scipy installed in your working directory. 
-3. Get you conditional data from conditional.csh.rit.edu, or ask an RTP to grab your info from the server. 
+3. Get your conditional data from conditional.csh.rit.edu, or ask an RTP to grab your info from the server. 
 4. Now run the program! You can do this in one of two ways : 
     1. File mode : Simply run the file with '-f' and then the filename afterwards
        - Ex : python ai\_vote.py -f example\_file.csv 
