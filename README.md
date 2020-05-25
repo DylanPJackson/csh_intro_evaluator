@@ -44,7 +44,7 @@ get the appropriate features and results.
 Want to see whether or not you'd make it into CSH? Follow these steps 
 1. Go ahead and download ai\_vote.py. 
 2. Make sure you have numpy and scipy installed in your working directory. 
-3. You can use this program in one of two ways : 
+3. Now run the program! You can do this in one of two ways : 
     1. File mode : Simply run the file with '-f' and then the filename afterwards
-    ..* whatever
+    - whatever 
     2. Command line mode
