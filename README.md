@@ -41,6 +41,10 @@ get the appropriate features and results.
 2. The model itself is a logistic regression model which 
 
 ### Usage
-Want to 
-1. Go ahead and download ai\_vote.py. This is the cli
-2. Make sure you have 
+Want to see whether or not you'd make it into CSH? Follow these steps 
+1. Go ahead and download ai\_vote.py. 
+2. Make sure you have numpy and scipy installed in your working directory. 
+3. You can use this program in one of two ways : 
+    1. File mode : Simply run the file with '-f' and then the filename afterwards
+    ..* whatever
+    2. Command line mode
