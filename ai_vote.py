@@ -50,4 +50,10 @@ def main():
     powers = np.array([0,2,4,4,0,0])
     num_args = len(sys.argv)
     if (num_args < 3) or (num_args > 7):
-        print("python -f [filen
+        print("python ai_vote.py -f filename\n" \
+              "python ai_vote.py s_m h_m d_a t_a s\n" \
+              "    s_m : signatures missed\n    h_m : house meetings missed\n" \
+              "    d_a : directorship meetings attended\n    t_a : technical seminars attended\n" \
+              "    s : social events (1 if attended any, 0 if none)")
+
+main()
