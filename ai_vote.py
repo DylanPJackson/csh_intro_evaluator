@@ -3,11 +3,6 @@
     description : Use the CSH Introductory Evaluator for yourself to see what
         house would vote, based off of past data.
     author : Dylan P. Jackson
-
-    TODO : Define usage statement
-           Take in command line features
-           Load in features from file
-           Pretty print response to user
 """
 import numpy as  np
 import sys
@@ -62,6 +57,13 @@ def predict(theta, X, powers):
 def display_results(preds, names):
     """
         Pretty print the predicted votes
+        
+        Parameters
+        ----------
+        preds : array (n)
+            Array of predictions for each of the names
+        names : array (n)
+            The names of all the people put through the classifier
     """
     m = preds.shape[0]
     for i in range(m):
@@ -99,11 +101,14 @@ def main():
             X = X.reshape(1,m)
             m = X.shape[0]
         X = np.concatenate([np.ones((m,1)), X], axis=1)
+    # If using command line exclusively (only supports one person this way tho)
     elif num_args == 7:
         X = np.array((1,float(sys.argv[2]), float(sys.argv[3]), float(sys.argv[4]), float(sys.argv[5]), float(sys.argv[6])))
         X = X.reshape(1,6)
         names = [sys.argv[1]]
+    # Get the predictions
     preds = predict(theta, X, powers)
+    # Display them through command line
     display_results(preds, names) 
 
 main()
