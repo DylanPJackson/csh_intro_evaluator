@@ -47,13 +47,14 @@ Want to see whether or not you'd make it into CSH? Follow these steps
 3. Now run the program! You can do this in one of two ways : 
     1. File mode : Simply run the file with '-f' and then the filename afterwards
        - Ex : python ai\_vote.py -f dylan\_info.csv 
-       - For convenience sake, make your file a .csv with the below format. In this way, you can try multiple people!
+       - For convenience sake, make your file a .csv with the columns in the following format :  
      name,signatures_missed,house_meetings_missed,directorship_meetings_attended,technical_seminars_attended,socials
-     where socials is just a 1 or 0 for if you did or did not do any social events.
+       - socials is just a 1 or 0 for if you did or did not do any social events.
     2. Command line mode : Supply all of the conditional data through command line argument in the below format
-       - Ex : python ai\_vote.py s_m h_m d_a t_a s
+       - python ai\_vote.py s_m h_m d_a t_a s
           - s_m : number of signatures missed
           - h_m : number of house meetings missed
           - d_a : number of directorship meetings attended
           - t_a : number of technical seminars attended
           - s : whether or not you attended social events. Put 1 if you attended more 0 events, put 0 otherwise.
+       - Ex : python ai\_vote.py 0 0 60 20 1
