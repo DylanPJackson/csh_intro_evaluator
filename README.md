@@ -36,11 +36,9 @@ that applicant.
 
 ### How it was made
 1. A copy of the CSH databases was acquired in the form of a raw NoSQL dump. A
-local SQL database was created from that dump. Tons of SQL queries were made to
+local SQL database was created from that dump. Various SQL queries were made to
 get the appropriate features and results. 
-2. Thoughts on general model. Should we use a neural network, should we use 
-logistic regression, what should the activation function be, should we regularize,
-and many other questions.
+2. The model itself is a logistic regression model which 
 
-## TODO Items
-1. Regularized vs. non regularized
+### Usage
+1. Go ahead and download ai\_vote.py
