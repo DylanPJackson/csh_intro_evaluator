@@ -38,18 +38,30 @@ that applicant.
 1. A copy of the CSH databases was acquired in the form of a raw NoSQL dump. A
 local SQL database was created from that dump. Various SQL queries were made to
 get the appropriate features and results. 
-2. The model itself is a logistic regression model which 
+2. Various design considerations were taken into account when trying to figure out
+what model / approach to use, but in the end I settled with a basic logistic
+regression model using the One Vs. All approach. (Of course, I'm still toying
+around with other possibilities)
+3. Testing was done to find the optimal hypothesis function, and eventually
+I settled on one that has decent prediction accuracy of around 83%.
+4. The data available for this project was about 200 entries, so a traditional
+split of 60/30/10 (or whatever standard you like) was not very feasible. Thus,
+attempts are being made to find what others have done in similar situations and
+how they solved this issue. 
 
 ### Usage
 Want to see whether or not you'd make it into CSH? Follow these steps 
+(If you have any questions about this, message me on Slack or email me!)
 1. Go ahead and download ai\_vote.py. 
 2. Make sure you have numpy and scipy installed in your working directory. 
-3. Now run the program! You can do this in one of two ways : 
+3. Get you conditional data from conditional.csh.rit.edu, or ask an RTP to grab your info from the server. 
+4. Now run the program! You can do this in one of two ways : 
     1. File mode : Simply run the file with '-f' and then the filename afterwards
-       - Ex : python ai\_vote.py -f dylan\_info.csv 
+       - Ex : python ai\_vote.py -f example\_file.csv 
        - For convenience sake, make your file a .csv with the columns in the following format :  
      name,signatures_missed,house_meetings_missed,directorship_meetings_attended,technical_seminars_attended,socials
        - socials is just a 1 or 0 for if you did or did not do any social events.
+       - If you're confused about the formatting, just check my example file, 'example_file.csv'
     2. Command line mode : Supply all of the conditional data through command line argument in the below format
        - python ai\_vote.py s_m h_m d_a t_a s
           - s_m : number of signatures missed
