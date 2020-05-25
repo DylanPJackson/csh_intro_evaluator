@@ -46,8 +46,8 @@ Want to see whether or not you'd make it into CSH? Follow these steps
 2. Make sure you have numpy and scipy installed in your working directory. 
 3. Now run the program! You can do this in one of two ways : 
     1. File mode : Simply run the file with '-f' and then the filename afterwards
-    - Ex : python ai\_vote.py -f dylan\_info.csv 
-    - For convenience sake, make your file a .csv with the following format. In this way, you can try multiple people!
+     - Ex : python ai\_vote.py -f dylan\_info.csv 
+     - For convenience sake, make your file a .csv with the following format. In this way, you can try multiple people!
      
      name,signatures_missed,house_meetings_missed,directorship_meetings_attended,technical_seminars_attended,socials
      where socials is just a 1 or 0 for if you did or did not do any social events.
