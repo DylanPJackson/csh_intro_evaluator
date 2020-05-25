@@ -2,8 +2,8 @@
 ## What is CSH? 
 CSH, or [Computer Science House](https://www.csh.rit.edu/), is a fantastic 
 community at RIT that I am fortunate enough to be a member of. We all have a 
-passion for learning and teaching, and we try to help each other develop as 
-professionals and individuals.  
+passion for learning and teaching in regards to anything we're passionate about. 
+We try to help each other develop as professionals and individuals with whatever we do. 
 
 ## What is our intro process?
 In order to join the organization, a prospective member goes through our intro
@@ -41,4 +41,6 @@ get the appropriate features and results.
 2. The model itself is a logistic regression model which 
 
 ### Usage
-1. Go ahead and download ai\_vote.py
+Want to 
+1. Go ahead and download ai\_vote.py. This is the cli
+2. Make sure you have 
