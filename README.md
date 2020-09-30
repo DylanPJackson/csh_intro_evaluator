@@ -1,4 +1,4 @@
-# The Evaluator : Predict an applicant's decision to CSH
+# CSH Introductory Evaluator 
 ## What is CSH? 
 CSH, or [Computer Science House](https://www.csh.rit.edu/), is a fantastic 
 community at RIT that I am fortunate enough to be a member of. We all have a 
@@ -70,3 +70,26 @@ Want to see whether or not you'd make it into CSH? Follow these steps
           - t_a : number of technical seminars attended
           - s : whether or not you attended social events. Put 1 if you attended more 0 events, put 0 otherwise.
        - Ex : python ai\_vote.py 0 0 60 20 1
+
+## Some SQL Queries I ran to get various data
+1. To retrieve all House Meetings missed for the 2019 class
+
+    select uid, count(attendance_status) from member_hm_attendance
+    where attendance_status = 'Absent'
+    and meeting_id in
+        (select id from house_meetings
+        where date <= '10-27-19' and date >= '08-25-19')
+    and uid in
+        (select uid from freshman_eval_data
+        where eval_date >= '2019-11-01 00:00:00')
+    group by uid
+    order by uid
+
+2. To get evaluation results
+    select uid, freshman_eval_result
+    case
+        when freshman_eval_result = 'Pending' then 2
+        when freshman_eval_result = 'Passed' then 1
+        else 0
+    end
+
